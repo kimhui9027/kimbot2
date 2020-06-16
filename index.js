@@ -95,6 +95,9 @@ client.on('message', (message) => {
     message.channel.send('뭐이새꺄?');
   }
 
+  if(message.content === '후이야 배워') {
+    message.reply('난 크시야 아니란다.');
+  }
 
 });
 
