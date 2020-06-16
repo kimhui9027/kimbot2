@@ -83,6 +83,19 @@ client.on('message', (message) => {
     message.channel.send('여기 있는데 왜 그러시나요');
   }
 
+  if(message.content === '후이바보') {
+    message.channel.send('뭐이새꺄?');
+  }
+
+  if(message.content === '후이 바보') {
+    message.channel.send('뭐이새꺄?');
+  }
+
+  if(message.content === '후이야 바보') {
+    message.channel.send('뭐이새꺄?');
+  }
+
+
 });
 
 client.login(token);
