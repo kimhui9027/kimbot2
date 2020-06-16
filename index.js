@@ -127,13 +127,53 @@ client.on('message', (message) => {
     let img = '';
     let embed = new Discord.RichEmbed()
       .setTitle('후이봇의 도움말')
-      .setURL('http://www.naver.com')
+      .setURL('')
       .setAuthor('', img, '')
       .setThumbnail(img)
       .addBlankField()
       .addField('후이야 도움말 후이봇과 놀기', '후이봇과 노는 법을 알여줌')
       .addField('후이야 도움말 공지', '공지의 사용법을 알려줌', true)
       .addField('후이야 버전', '후이봇의 버전을 알 수 있음', true)
+      .addBlankField()
+      .setTimestamp()
+      .setFooter('', img)
+
+    message.channel.send(embed)
+  } else if(message.content == 'embed2') {
+    let helpImg = 'https://images-ext-1.discordapp.net/external/RyofVqSAVAi0H9-1yK6M8NGy2grU5TWZkLadG-rwqk0/https/i.imgur.com/EZRAPxR.png';
+    let commandList = [
+      {name: 'ping', desc: '현재 핑 상태'},
+      {name: 'embed', desc: 'embed 예제1'},
+      {name: 'embed2', desc: 'embed 예제2 (help)'},
+      {name: '!전체공지', desc: 'dm으로 전체 공지 보내기'},
+    ];
+    let commandStr = '';
+    let embed = new Discord.RichEmbed()
+      .setAuthor('Help of 콜라곰 BOT', helpImg)
+      .setColor('#186de6')
+      .setFooter(`콜라곰 BOT ❤️`)
+      .setTimestamp()
+    
+    commandList.forEach(x => {
+      commandStr += `• \`\`${changeCommandStringLength(`${x.name}`)}\`\` : **${x.desc}**\n`;
+    });
+
+    embed.addField('Commands: ', commandStr);
+
+    message.channel.send(embed)
+  }
+
+  if(message.content == '후이야 도움말2 후이봇과 놀기') {
+    let img = '';
+    let embed = new Discord.RichEmbed()
+      .setTitle('후이봇과 도움말')
+      .setURL('')
+      .setAuthor('', img, '')
+      .setThumbnail(img)
+      .addBlankField()
+      .addField('후이야', '후이봇을 부른다.', true)
+      .addField('후이야?', '후이봇을 또 부른다.', true)
+      .addField('후이야 안녕', '후이봇과 인사를 할 수 있음', true)
       .addBlankField()
       .setTimestamp()
       .setFooter('', img)
