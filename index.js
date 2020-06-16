@@ -140,13 +140,13 @@ client.on('message', (message) => {
       .setTimestamp()
       .setFooter('', img)
 
-    message.channel.send(embed)
-  } else if(message.content == 'embed2') {
-    let helpImg = 'https://images-ext-1.discordapp.net/external/RyofVqSAVAi0H9-1yK6M8NGy2grU5TWZkLadG-rwqk0/https/i.imgur.com/EZRAPxR.png';
+    message.channel.send('후이야 도움말')
+  } else if(message.content == '후이야 도움말 후이봇과 놀기') {
+    let helpImg = '';
     let commandList = [
-      {name: 'ping', desc: '현재 핑 상태'},
-      {name: 'embed', desc: 'embed 예제1'},
-      {name: 'embed2', desc: 'embed 예제2 (help)'},
+      {name: '후이야', desc: '후이를 부르기'},
+      {name: '후이야?', desc: '후이를 또 부르기'},
+      {name: '후이야 너 못생겼어', desc: '후이봇과 후이봇 관리자를 기분나쁘게 하는 메시지'},
       {name: '!전체공지', desc: 'dm으로 전체 공지 보내기'},
     ];
     let commandStr = '';
