@@ -108,7 +108,7 @@ client.on('message', (message) => {
   }
 
   if(message.content === '후이야 버전') {
-    message.channel.send('ver.1.2.7');
+    message.channel.send('버전은 ver.1.2.7 입니다.');
   }
 
   if(message.content.startsWith('후이야 전체공지')) {
