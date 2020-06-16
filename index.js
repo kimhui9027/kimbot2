@@ -115,6 +115,14 @@ client.on('message', (message) => {
     message.channel.send('위대하신(?) 저의 제작자군요.');
   }
 
+  if(message.content === '후이야 하이') {
+    message.channel.send('hello world!');
+  }
+
+  if(message.content === '후이야 도움말') {
+    alert.channel.send('후이야 도움말 후이와 놀기');
+  }
+
   if(message.content.startsWith('후이야 전체공지')) {
     if(checkPermission(message)) return
     if(message.member != null) { // 채널에서 공지 쓸 때
