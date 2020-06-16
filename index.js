@@ -166,14 +166,16 @@ client.on('message', (message) => {
   if(message.content == '후이야 도움말2 후이봇과 놀기') {
     let img = '';
     let embed = new Discord.RichEmbed()
-      .setTitle('후이봇과 도움말')
+      .setTitle('후이봇과 놀기')
       .setURL('')
       .setAuthor('', img, '')
       .setThumbnail(img)
       .addBlankField()
       .addField('후이야', '후이봇을 부른다.', true)
       .addField('후이야?', '후이봇을 또 부른다.', true)
-      .addField('후이야 안녕', '후이봇과 인사를 할 수 있음', true)
+      .addField('후이야 안녕', '후이봇과 인사를 할 수 있음.', true)
+      .addField('후이바보, 후이 바보, 후이야 바보', '후이봇과 후이봇관리자를 기분나쁘게 한다.', true)
+      .addField('후이야 너 못생겼어', '위와 같이 기분나쁘게 한는거지만 맞는 말이다.', true)
       .addBlankField()
       .setTimestamp()
       .setFooter('', img)
