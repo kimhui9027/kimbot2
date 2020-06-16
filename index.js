@@ -103,6 +103,14 @@ client.on('message', (message) => {
     message.reply('뒤질래?');
   }
 
+  if(message.content === '후이야 흠') {
+    message.channel.send('메이터');
+  }
+
+  if(message.content === '후이야 버전') {
+    message.channel.send('ver.1.2.7');
+  }
+
   if(message.content.startsWith('후이야 전체공지')) {
     if(checkPermission(message)) return
     if(message.member != null) { // 채널에서 공지 쓸 때
