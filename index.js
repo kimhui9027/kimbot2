@@ -138,32 +138,7 @@ client.on('message', (message) => {
       .addField('Inline field title', 'Some value here1\nSome value here2\nSome value here3\n')
       .addBlankField()
       .setTimestamp()
-      .setFooter('', img)
-
-    message.channel.send('후이야 도움말')
-  } else if(message.content == '후이야 도움말 후이봇과 놀기') {
-    let helpImg = '';
-    let commandList = [
-      {name: '후이야', desc: '후이를 부르기'},
-      {name: '후이야?', desc: '후이를 또 부르기'},
-      {name: '후이야 너 못생겼어', desc: '후이봇과 후이봇 관리자를 기분나쁘게 하는 메시지'},
-      {name: '!전체공지', desc: 'dm으로 전체 공지 보내기'},
-    ];
-    let commandStr = '';
-    let embed = new Discord.RichEmbed()
-      .setAuthor('Help of 콜라곰 BOT', helpImg)
-      .setColor('#186de6')
-      .setFooter(`콜라곰 BOT ❤️`)
-      .setTimestamp()
-    
-    commandList.forEach(x => {
-      commandStr += `• \`\`${changeCommandStringLength(`${x.name}`)}\`\` : **${x.desc}**\n`;
-    });
-
-    embed.addField('Commands: ', commandStr);
-
-    message.channel.send(embed)
-  }
+      .setFooter('', img);
 
   if(message.content.startsWith('후이야 전체공지')) {
     if(checkPermission(message)) return
