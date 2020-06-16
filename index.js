@@ -119,10 +119,6 @@ client.on('message', (message) => {
     message.reply('hello world!');
   }
 
-  if(message.content === '후이야 도움말') {
-    message.channel.send('명령어 목록\n 후이야 도움말 후이와 놀기');
-  }
-
   if(message.content === '후이야 도움말 후이와 놀기') {
     message.channel.send('후이와 놀기\n 후이야 안녕\n 후이야 너 못생겼어\n  후이바보, 후이 바보, 후이야 바보\n  후이야 흠\n 후이야 하이\n 후이야 빡대갈이야?\n  후이야?\n 후이야 안경빨\n 후이야 하트\n 후이야 넌\n 후이야 나 귀여워?\n 후이야 크시는 어때?\n 후이야 넌\n 후이야 앗!\n  후이야 뭐해?\n  후이야 노래해줘\n 후이야 강화해줘\n 후이야 배워 등');
   }
