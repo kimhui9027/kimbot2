@@ -116,11 +116,15 @@ client.on('message', (message) => {
   }
 
   if(message.content === '후이야 하이') {
-    message.channel.send('hello world!');
+    message.reply('hello world!');
   }
 
   if(message.content === '후이야 도움말') {
-    alert.channel.send('후이야 도움말 후이와 놀기');
+    message.channel.send('후이야 도움말 후이와 놀기');
+  }
+
+  if(message.content === '후이야 도움말 후이와 놀기') {
+    message.channel.send('후이야 안녕\n후이야 너 못생겼어\n후이바보, 후이 바보, 후이야 바보\n후이야 흠\n후이야 하이\n 후이야 빡대갈이야?\n후이야?\n후이야 안경빨\n후이야 하트\n후이야 넌\n후이야 나 귀여워?\n후이야 크시는 어때?\n후이야 넌\n후이야 앗!\n후이야 뭐해?\n후이야 노래해줘\n후이야 강화해줘\n후이야 배워 등');
   }
 
   if(message.content.startsWith('후이야 전체공지')) {
