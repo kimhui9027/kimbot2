@@ -96,7 +96,7 @@ client.on('message', (message) => {
   }
 
   if(message.content === '후이야 배워') {
-    message.reply('난 크시야 아니란다.');
+    message.reply('난 크시가 아니란다.');
   }
 
 });
