@@ -111,6 +111,10 @@ client.on('message', (message) => {
     message.channel.send('버전은 ver.1.2.7 입니다.');
   }
 
+  if(message.content === '후이야 kimhui9027') {
+    message.channel.send('위대하신(?) 저의 제작자군요.');
+  }
+
   if(message.content.startsWith('후이야 전체공지')) {
     if(checkPermission(message)) return
     if(message.member != null) { // 채널에서 공지 쓸 때
