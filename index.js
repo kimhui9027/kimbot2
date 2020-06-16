@@ -119,12 +119,43 @@ client.on('message', (message) => {
     message.reply('hello world!');
   }
 
-  if(message.content === '후이야 도움말') {
-    message.channel.send('후이야 도움말 후이와 놀기');
+  if(message.content === '후이야 도움말 후이와 놀기') {
+    message.channel.send('후이와 놀기\n 후이야 안녕\n 후이야 너 못생겼어\n  후이바보, 후이 바보, 후이야 바보\n  후이야 흠\n 후이야 하이\n 후이야 빡대갈이야?\n  후이야?\n 후이야 안경빨\n 후이야 하트\n 후이야 넌\n 후이야 나 귀여워?\n 후이야 크시는 어때?\n 후이야 넌\n 후이야 앗!\n  후이야 뭐해?\n  후이야 노래해줘\n 후이야 강화해줘\n 후이야 배워 등');
   }
 
-  if(message.content === '후이야 도움말 후이와 놀기') {
-    message.channel.send('후이야 안녕\n후이야 너 못생겼어\n후이바보, 후이 바보, 후이야 바보\n후이야 흠\n후이야 하이\n 후이야 빡대갈이야?\n후이야?\n후이야 안경빨\n후이야 하트\n후이야 넌\n후이야 나 귀여워?\n후이야 크시는 어때?\n후이야 넌\n후이야 앗!\n후이야 뭐해?\n후이야 노래해줘\n후이야 강화해줘\n후이야 배워 등');
+  if(message.content == '후이야 도움말') {
+    let img = 'https://cdn.discordapp.com/icons/419671192857739264/6dccc22df4cb0051b50548627f36c09b.webp?size=256';
+    let embed = new Discord.RichEmbed()
+      .setTitle('후이봇 도움말')
+      .setURL('')
+      .setThumbnail(img)
+      .addBlankField()
+      .addField('   후이야 도움말 후이와 놀기', '   후이봇과 노는 커맨드들이 들어있음.')
+      .addField('Inline field title', 'Some value here', true)
+      .addField('Inline field title', 'Some value here', true)
+      .addField('Inline field title', 'Some value here', true)
+      .addField('Inline field title', 'Some value here1\nSome value here2\nSome value here3\n')
+      .addBlankField()
+      .setTimestamp()
+      .setFooter('나긋해가 만듬', img)
+
+    message.channel.send(embed)
+  } else if(message.content == 'embed2') {
+    let helpImg = 'https://images-ext-1.discordapp.net/external/RyofVqSAVAi0H9-1yK6M8NGy2grU5TWZkLadG-rwqk0/https/i.imgur.com/EZRAPxR.png';
+    let commandStr = '';
+    let embed = new Discord.RichEmbed()
+      .setAuthor('', helpImg)
+      .setColor('#ffffff')
+      .setFooter(``)
+      .setTimestamp()
+    
+    commandList.forEach(x => {
+      commandStr += `• \`\`${changeCommandStringLength(`${x.name}`)}\`\` : **${x.desc}**\n`;
+    });
+
+    embed.addField('Commands: ', commandStr);
+
+    message.channel.send(embed)
   }
 
   if(message.content.startsWith('후이야 전체공지')) {
