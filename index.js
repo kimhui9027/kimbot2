@@ -60,7 +60,7 @@ client.on('message', (message) => {
   }
 
   if(message.content === '후이야 나 귀여워?') {
-    message.reply('님 착각하지 마세요');
+    message.reply('님 착각하지 마세요.');
   }
 
   if(message.content === '후이야 너 못생겼어') {
