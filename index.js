@@ -99,6 +99,10 @@ client.on('message', (message) => {
     message.reply('난 크시가 아니란다.');
   }
 
+  if(message.content === '후이야 빡대갈이야?') {
+    message.reply('뒤질래?');
+  }
+
 });
 
 client.login(token);
