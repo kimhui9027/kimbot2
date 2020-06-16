@@ -134,8 +134,6 @@ client.on('message', (message) => {
       .addField('후이야 도움말 후이봇과 놀기', '후이봇과 노는 법을 알여줌')
       .addField('후이야 도움말 공지', '공지의 사용법을 알려줌', true)
       .addField('후이야 버전', '후이봇의 버전을 알 수 있음', true)
-      .addField('Inline field title', 'Some value here', true)
-      .addField('Inline field title', 'Some value here1\nSome value here2\nSome value here3\n')
       .addBlankField()
       .setTimestamp()
       .setFooter('', img)
