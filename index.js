@@ -48,7 +48,7 @@ client.on('message', (message) => {
   }
 
   if(message.content === '후이야 앗!') {
-    message.reply('야생의 일반유저가 나타났다!');
+    message.channel.send('야생의 일반유저가 나타났다!');
   }
 
   if(message.content === '후이야 뭐해?') {
