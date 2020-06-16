@@ -119,10 +119,6 @@ client.on('message', (message) => {
     message.reply('hello world!');
   }
 
-  if(message.content === '후이야 도움말 후이봇과 놀기') {
-    message.channel.send('후이와 놀기\n 후이야 안녕\n 후이야 너 못생겼어\n  후이바보, 후이 바보, 후이야 바보\n  후이야 흠\n 후이야 하이\n 후이야 빡대갈이야?\n  후이야?\n 후이야 안경빨\n 후이야 하트\n 후이야 넌\n 후이야 나 귀여워?\n 후이야 크시는 어때?\n 후이야 넌\n 후이야 앗!\n  후이야 뭐해?\n  후이야 노래해줘\n 후이야 강화해줘\n 후이야 배워 등');
-  }
-
   if(message.content == '후이야 도움말') {
     let img = '';
     let embed = new Discord.RichEmbed()
@@ -131,7 +127,7 @@ client.on('message', (message) => {
       .setAuthor('', img, '')
       .setThumbnail(img)
       .addBlankField()
-      .addField('후이야 도움말 후이봇과 놀기', '후이봇과 노는 법을 알여줌')
+      .addField('후이야 도움말 후이봇과 놀기, 후이야 도움말2', '후이봇과 노는 법을 알여줌')
       .addField('후이야 도움말 공지', '공지의 사용법을 알려줌', true)
       .addField('후이야 버전', '후이봇의 버전을 알 수 있음', true)
       .addBlankField()
@@ -163,7 +159,58 @@ client.on('message', (message) => {
     message.channel.send(embed)
   }
 
-  if(message.content == '후이야 도움말2 후이봇과 놀기') {
+  if(message.content == '후이야 도움말 후이봇과 놀기') {
+    let img = '';
+    let embed = new Discord.RichEmbed()
+      .setTitle('후이봇과 놀기')
+      .setURL('')
+      .setAuthor('', img, '')
+      .setThumbnail(img)
+      .addBlankField()
+      .addField('후이야', '후이봇을 부른다.', true)
+      .addField('후이야?', '후이봇을 또 부른다.', true)
+      .addField('후이야 안녕', '후이봇과 인사를 할 수 있음.', true)
+      .addField('후이바보, 후이 바보, 후이야 바보', '후이봇과 후이봇관리자를 기분나쁘게 한다.', true)
+      .addField('후이야 너 못생겼어', '같이 기분나쁘게 한는거지만 맞는 말이다.', true)
+      .addField('후이야 흠', '흠.', true)
+      .addField('후이야 안녕, 하이', '후이봇에게 인사를 한다.', true)
+      .addField('후이야 빡대갈이야?', '후이봇과 후이봇 관리자를 더 기분나쁘게 한다.', true)
+      .addField('후이야 하트', '우웩.', true)
+      .addField('후이야 크시는 어때?', '우웨웩.', true)
+      .addField('후이야 넌', '넌 나에게 모욕감을 줬어.', true)
+      .addField('후이야 앗!', '야생의 일반유저가 나왔다!', true)
+      .addField('후이야 노래해줘, 후이야 강화해줘,후이야 배워', '후이봇이 못 하는것.', true)
+      .addField('후이야 빡대갈이야?', '후이봇과 후이봇 관리자를 더 기분나쁘게 한다.', true)
+      .addBlankField()
+      .setTimestamp()
+      .setFooter('', img)
+
+    message.channel.send(embed)
+  } else if(message.content == 'embed2') {
+    let helpImg = 'https://images-ext-1.discordapp.net/external/RyofVqSAVAi0H9-1yK6M8NGy2grU5TWZkLadG-rwqk0/https/i.imgur.com/EZRAPxR.png';
+    let commandList = [
+      {name: 'ping', desc: '현재 핑 상태'},
+      {name: 'embed', desc: 'embed 예제1'},
+      {name: 'embed2', desc: 'embed 예제2 (help)'},
+      {name: '!전체공지', desc: 'dm으로 전체 공지 보내기'},
+    ];
+    let commandStr = '';
+    let embed = new Discord.RichEmbed()
+      .setAuthor('Help of 콜라곰 BOT', helpImg)
+      .setColor('#186de6')
+      .setFooter(`콜라곰 BOT ❤️`)
+      .setTimestamp()
+    
+    commandList.forEach(x => {
+      commandStr += `• \`\`${changeCommandStringLength(`${x.name}`)}\`\` : **${x.desc}**\n`;
+    });
+
+    embed.addField('Commands: ', commandStr);
+
+    message.channel.send(embed)
+  }
+
+  if(message.content == '후이야 도움말2') {
     let img = '';
     let embed = new Discord.RichEmbed()
       .setTitle('후이봇과 놀기')
