@@ -4,10 +4,10 @@ const token = process.env.token;
 const welcomeChannelName = "입장-퇴장";
 const byeChannelName = "입장-퇴장";
 const welcomeChannelComment = "님! Team.kimhui9027에 오신 것을 환영합니다!";
-const byeChannelComment = "님이 Team.kimhui9027에서 나가신다니 아쉽네요.";
+const byeChannelComment = "님이 Team.kimhui9027에서 나가신다니 아쉽네요,";
 
 client.on('ready', () => {
-  console.log('켰다.');
+  console.log('kimhui9027 bot has enabled');
 });
 
 client.on("guildMemberAdd", (member) => {
@@ -17,7 +17,7 @@ client.on("guildMemberAdd", (member) => {
 
   welcomeChannel.send(`<@${newUser.id}> ${welcomeChannelComment}\n`);
 
-  member.addRole(guild.roles.find(role => role.name == "일반유저"));
+  member.addRole(guild.roles.find(role => role.name == "기본유저"));
 });
 
 client.on("guildMemberRemove", (member) => {
