@@ -8,23 +8,7 @@ const byeChannelComment = "님이 Team.kimhui9027에서 나가신다니 아쉽�
 
 client.on('ready', () => {
   console.log('kimhui9027 bot has enabled');
-  static void UpdatePresence()
-{
-    DiscordRichPresence discordPresence;
-    memset(&discordPresence, 0, sizeof(discordPresence));
-    discordPresence.state = "Playing Solo";
-    discordPresence.details = "Competitive";
-    discordPresence.startTimestamp = 1507665886;
-    discordPresence.endTimestamp = 1507665886;
-    discordPresence.largeImageText = "Numbani";
-    discordPresence.smallImageText = "Rogue - Level 100";
-    discordPresence.partyId = "ae488379-351d-4a4f-ad32-2b9b01c91657";
-    discordPresence.partySize = 1;
-    discordPresence.partyMax = 5;
-    discordPresence.spectateSecret = "MTIzNDV8MTIzNDV8MTMyNDU0";
-    discordPresence.joinSecret = "MTI4NzM0OjFpMmhuZToxMjMxMjM= ";
-    Discord_UpdatePresence(&discordPresence);
-}
+  client.user.setActivity('"후이야 도움말"을 펴서 도우말을 볼 수 있습니다.', {type : 'PLAYING'});
 });
 
 client.on("guildMemberAdd", (member) => {
