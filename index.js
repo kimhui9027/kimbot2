@@ -52,6 +52,14 @@ client.on('message', (message) => {
     message.reply('제가 그걸 어떻게 하나요.');
   }
 
+  if(message.content === '후아야 :heart:') {
+    message.reply('드러워.');
+  }
+
+  if(message.content === '후아야:heart:') {
+    message.reply('드러워.');
+  }
+
   if(message.content === '후이야 노래해줘') {
     message.reply('음치라서 안돼요!');
   }
