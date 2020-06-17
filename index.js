@@ -56,6 +56,10 @@ client.on('message', (message) => {
     message.reply('kimhui9027님의 명령 프롬프트에 의해 조종당하고 있어요.');
   }
 
+  if(message.content === '후이야 치킨 시켜줘') {
+    message.reply('kimhui9027님의 명령 프롬프트에 의해 조종당하고 있어요.');
+  }
+
   if(message.content === '후이야 넌') {
     message.reply('넌 나에게 모욕감을 줬어.');
   }
@@ -177,6 +181,7 @@ client.on('message', (message) => {
       .addField('후이야 안녕, 하이', '후이봇에게 인사를 한다.', true)
       .addField('후이야 빡대갈이야?', '후이봇과 후이봇 관리자를 더 기분나쁘게 한다.', true)
       .addField('후이야 하트', '우웩.', true)
+      .addField('후이야 치킨 시켜줘', '오늘 저녁은 치킨이닭?', true)
       .addField('후이야 크시는 어때?', '우웨웩.', true)
       .addField('후이야 넌', '넌 나에게 모욕감을 줬어.', true)
       .addField('후이야 앗!', '야생의 일반유저가 나왔다!', true)
@@ -228,6 +233,7 @@ client.on('message', (message) => {
       .addField('후이야 안녕, 하이', '후이봇에게 인사를 한다.', true)
       .addField('후이야 빡대갈이야?', '후이봇과 후이봇 관리자를 더 기분나쁘게 한다.', true)
       .addField('후이야 하트', '우웩.', true)
+      .addField('후이야 치킨 시켜줘', '오늘 저녁은 치킨이닭?', true)
       .addField('후이야 크시는 어때?', '우웨웩.', true)
       .addField('후이야 넌', '넌 나에게 모욕감을 줬어.', true)
       .addField('후이야 앗!', '야생의 일반유저가 나왔다!', true)
