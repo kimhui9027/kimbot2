@@ -40,6 +40,10 @@ client.on('message', (message) => {
     message.reply('부르셨어요?');
   }
 
+  if(message.content === '후이야 無') {
+    message.reply('의사양반 : 어.. 그러니까... 없어요');
+  }
+
   if(message.content === '후이야 시끄러워') {
     message.reply('닥쳐.');
   }
@@ -199,6 +203,7 @@ client.on('message', (message) => {
       .addField('후이야 너 못생겼어', '같이 기분나쁘게 하는거지만 맞는 말이다.', true)
       .addField('후이야 흠', '흠.', true)
       .addField('후이야 후라이', '깡!', true)
+      .addField('후이야 無', '이보시오.. 이보시오... 의사양반!', true)
       .addField('후이야 시끄러워', '흐으음...', true)
       .addField('후이야 안녕, 하이', '후이봇에게 인사를 한다.', true)
       .addField('후이야 빡대갈이야?', '후이봇과 후이봇 관리자를 더 기분나쁘게 한다.', true)
