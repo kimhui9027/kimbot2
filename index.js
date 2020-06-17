@@ -44,6 +44,10 @@ client.on('message', (message) => {
     message.reply('닥쳐.');
   }
 
+  if(message.content === '후이야 왜 쉬었어?') {
+    message.reply('삽소리 하지마세요.');
+  }
+
   if(message.content === '후이야 후라이') {
     message.channel.send('팬');
   }
