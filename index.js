@@ -325,20 +325,4 @@ function checkPermission(message) {
   }
 }
 
-static void UpdatePresence()
-{
-    DiscordRichPresence discordPresence;
-    memset(&discordPresence, 0, sizeof(discordPresence));
-    discordPresence.details = "'후이야 도움말' 라고 말하면 후이봇의 도움말을 보실 수 있습니다.";
-    discordPresence.startTimestamp = 1507665886;
-    discordPresence.endTimestamp = 1507665886;
-    discordPresence.largeImageText = "Numbani";
-    discordPresence.smallImageText = "Rogue - Level 100";
-    discordPresence.partyId = "ae488379-351d-4a4f-ad32-2b9b01c91657";
-    discordPresence.partySize = 1;
-    discordPresence.partyMax = 5;
-    discordPresence.joinSecret = " ";
-    Discord_UpdatePresence(&discordPresence);
-}
-
 client.login(token);
