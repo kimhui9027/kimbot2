@@ -117,7 +117,7 @@ client.on('message', (message) => {
   }
 
   if(message.content === '후이야 버전') {
-    message.channel.send('버전은 ver.1.4.5 입니다.');
+    message.channel.send('버전은 ver.1.4.8 입니다.');
   }
 
   if(message.content === '후이야 kimhui9027') {
