@@ -8,7 +8,7 @@ const byeChannelComment = "님이 Team.kimhui9027에서 나가신다니 아쉽�
 
 client.on('ready', () => {
   console.log('kimhui9027 bot has enabled');
-  client.user.setActivity('"후이야 도움말"을 펴서 도우말을 볼 수 있습니다.', {type : 'PLAYING'});
+  client.user.setActivity('"후이야 도움말"을 쳐서 도움말을 볼 수 있습니다.', {type : 'PLAYING'});
 });
 
 client.on("guildMemberAdd", (member) => {
