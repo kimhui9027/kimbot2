@@ -57,7 +57,7 @@ client.on('message', (message) => {
   }
 
   if(message.content === '후이야 치킨 시켜줘') {
-    message.reply('kimhui9027님의 명령 프롬프트에 의해 조종당하고 있어요.');
+    message.channel.send('시러.');
   }
 
   if(message.content === '후이야 넌') {
