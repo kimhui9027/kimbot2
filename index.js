@@ -40,6 +40,10 @@ client.on('message', (message) => {
     message.reply('부르셨어요?');
   }
 
+  if(message.content === '후이야 시끄러워') {
+    message.reply('닥쳐.');
+  }
+
   if(message.content === '후이야 후라이') {
     message.channel.send('팬');
   }
