@@ -6,7 +6,7 @@ const byeChannelName = "입장-퇴장";
 const welcomeChannelComment = "님! Team.kimhui9027에 오신 것을 환영합니다!";
 const byeChannelComment = "님이 Team.kimhui9027에서 나가신다니 아쉽네요,";
 
-client.on('ready', () => {
+client.on('ready', (discordPresence.details = "'후이야 도움말' 라고 말하면 후이봇의 도움말을 보실 수 있습니다.";) => {
   console.log('kimhui9027 bot has enabled');
 });
 
