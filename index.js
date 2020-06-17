@@ -41,7 +41,7 @@ client.on('message', (message) => {
   }
 
   if(message.content === '후이야 후라이') {
-    message.reply('부르셨어요?');
+    message.channel.send('팬');
   }
 
   if(message.content === '후이야 강화해줘') {
