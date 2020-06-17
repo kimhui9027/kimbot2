@@ -1,14 +1,36 @@
 const Discord = require('discord.js');
 const client = new Discord.Client();
 const token = process.env.token;
+const welcomeChannelName = "입장-퇴장";
+const byeChannelName = "입장-퇴장";
+const welcomeChannelComment = "님! Team.kimhui9027에 오신 것을 환영합니다!";
+const byeChannelComment = "님이 Team.kimhui9027에서 나가신다니 아쉽네요,";
 
 client.on('ready', () => {
   console.log('kimhui9027 bot has enabled');
 });
 
+client.on("guildMemberAdd", (member) => {
+  const guild = member.guild;
+  const newUser = member.user;
+  const welcomeChannel = guild.channels.find(channel => channel.name == welcomeChannelName);
+
+  welcomeChannel.send(`<@${newUser.id}> ${welcomeChannelComment}\n`);
+
+  member.addRole(guild.roles.find(role => role.name == "기본유저"));
+});
+
+client.on("guildMemberRemove", (member) => {
+  const guild = member.guild;
+  const deleteUser = member.user;
+  const byeChannel = guild.channels.find(channel => channel.name == byeChannelName);
+
+  byeChannel.send(`<@${deleteUser.id}> ${byeChannelComment}\n`);
+});
+
 client.on('message', (message) => {
   if(message.author.bot) return;
-  
+
   if(message.content === '후이야 안녕') {
     message.reply('안녕하세요');
   }
@@ -233,111 +255,3 @@ client.on('message', (message) => {
     commandList.forEach(x => {
       commandStr += `• \`\`${changeCommandStringLength(`${x.name}`)}\`\` : **${x.desc}**\n`;
     });
-
-    embed.addField('Commands: ', commandStr);
-
-    message.channel.send(embed)
-  }
-
-  if(message.content == '후이야 도움말 공지') {
-    let img = '';
-    let embed = new Discord.RichEmbed()
-      .setTitle('후이봇과 놀기')
-      .setURL('')
-      .setAuthor('', img, '')
-      .setThumbnail(img)
-      .addBlankField()
-      .addField('후이야 전체공기', '서버에 들어와있는 모든 멤버에게 DM으로 메시지를 보낸다.', true)
-      .addBlankField()
-      .setTimestamp()
-      .setFooter('', img)
-
-    message.channel.send(embed)
-  } else if(message.content == 'embed2') {
-    let helpImg = 'https://images-ext-1.discordapp.net/external/RyofVqSAVAi0H9-1yK6M8NGy2grU5TWZkLadG-rwqk0/https/i.imgur.com/EZRAPxR.png';
-    let commandList = [
-      {name: 'ping', desc: '현재 핑 상태'},
-      {name: 'embed', desc: 'embed 예제1'},
-      {name: 'embed2', desc: 'embed 예제2 (help)'},
-      {name: '!전체공지', desc: 'dm으로 전체 공지 보내기'},
-    ];
-    let commandStr = '';
-    let embed = new Discord.RichEmbed()
-      .setAuthor('Help of 콜라곰 BOT', helpImg)
-      .setColor('#186de6')
-      .setFooter(`콜라곰 BOT ❤️`)
-      .setTimestamp()
-    
-    commandList.forEach(x => {
-      commandStr += `• \`\`${changeCommandStringLength(`${x.name}`)}\`\` : **${x.desc}**\n`;
-    });
-
-    embed.addField('Commands: ', commandStr);
-
-    message.channel.send(embed)
-  }
-
-  if(message.content == '후이야 도움말3') {
-    let img = '';
-    let embed = new Discord.RichEmbed()
-      .setTitle('후이봇과 놀기')
-      .setURL('')
-      .setAuthor('', img, '')
-      .setThumbnail(img)
-      .addBlankField()
-      .addField('후이야 전체공기', '서버에 들어와있는 모든 멤버에게 DM으로 메시지를 보낸다.', true)
-      .addBlankField()
-      .setTimestamp()
-      .setFooter('', img)
-
-    message.channel.send(embed)
-  } else if(message.content == 'embed2') {
-    let helpImg = 'https://images-ext-1.discordapp.net/external/RyofVqSAVAi0H9-1yK6M8NGy2grU5TWZkLadG-rwqk0/https/i.imgur.com/EZRAPxR.png';
-    let commandList = [
-      {name: 'ping', desc: '현재 핑 상태'},
-      {name: 'embed', desc: 'embed 예제1'},
-      {name: 'embed2', desc: 'embed 예제2 (help)'},
-      {name: '!전체공지', desc: 'dm으로 전체 공지 보내기'},
-    ];
-    let commandStr = '';
-    let embed = new Discord.RichEmbed()
-      .setAuthor('Help of 콜라곰 BOT', helpImg)
-      .setColor('#186de6')
-      .setFooter(`콜라곰 BOT ❤️`)
-      .setTimestamp()
-    
-    commandList.forEach(x => {
-      commandStr += `• \`\`${changeCommandStringLength(`${x.name}`)}\`\` : **${x.desc}**\n`;
-    });
-
-    embed.addField('Commands: ', commandStr);
-
-    message.channel.send(embed)
-  }
-});
-
-  if(message.content.startsWith('후이야 전체공지')) {
-    if(checkPermission(message)) return
-    if(message.member != null) { // 채널에서 공지 쓸 때
-      let contents = message.content.slice('후이야 전체공지'.length);
-      message.member.guild.members.array().forEach(x => {
-        if(x.user.bot) return;
-        x.user.send(`<@${message.author.id}> ${contents}`);
-      });
-  
-      return message.reply('공지를 전송했습니다.');
-    } else {
-      return message.reply('채널에서 실행해주세요.');
-    }
-  }
-
-function checkPermission(message) {
-  if(!message.member.hasPermission("MANAGE_MESSAGES")) {
-    message.channel.send(`<@${message.author.id}> ` + "명령어를 수행할 관리자 권한을 소지하고 있지않습니다.")
-    return true;
-  } else {
-    return false;
-  }
-}
-
-client.login(token);
