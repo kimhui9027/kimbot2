@@ -41,7 +41,7 @@ client.on('message', (message) => {
   }
 
   if(message.content === '후이야 無') {
-    message.reply('의사양반 : 어.. 그러니까... 없어요');
+    message.channel.send('의사양반 : 어.. 그러니까... 없어요');
   }
 
   if(message.content === '후이야 시끄러워') {
@@ -137,7 +137,7 @@ client.on('message', (message) => {
   }
 
   if(message.content === '후이야 버전') {
-    message.channel.send('버전은 ver.1.5.4 입니다.');
+    message.channel.send('버전은 ver.1.5.7 입니다.');
   }
 
   if(message.content === '후이야 kimhui9027') {
