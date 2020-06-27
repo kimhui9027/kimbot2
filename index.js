@@ -56,6 +56,11 @@ client.on('message', (message) => {
     message.channel.send('팬');
   }
 
+  if(message.content === '후이야 코로나') {
+    message.reply('나는 코로나다!');
+    message.channel.send('[비명소리]');
+  }
+
   if(message.content === '후이야 강화해줘') {
     message.reply('제가 그걸 어떻게 하나요.');
   }
@@ -137,7 +142,7 @@ client.on('message', (message) => {
   }
 
   if(message.content === '후이야 버전') {
-    message.channel.send('버전은 ver.1.5.7 입니다.');
+    message.channel.send('버전은 ver.1.6.4 입니다.');
   }
 
   if(message.content === '후이야 kimhui9027') {
