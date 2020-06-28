@@ -146,7 +146,7 @@ client.on('message', (message) => {
   }
 
   if(message.content === '후이야 버전') {
-    message.channel.send('버전은 ver.1.6.5 입니다.');
+    message.channel.send('버전은 ver.1.6.6 입니다.');
   }
 
   if(message.content === '후이야 kimhui9027') {
@@ -218,6 +218,7 @@ client.on('message', (message) => {
       .addField('후이야 빡대갈이야?', '후이봇과 후이봇 관리자를 더 기분나쁘게 한다.', true)
       .addField('후이야 하트', '우웩.', true)
       .addField('후이야 코로나', '이시국에?', true)
+      .addField('후이야 자폭해', '[폭발음]', true)
       .addField('후이야 치킨 시켜줘', '오늘 저녁은 치킨이닭?', true)
       .addField('후이야 크시는 어때?', '우웨웩.', true)
       .addField('후이야 넌', '넌 나에게 모욕감을 줬어.', true)
@@ -274,6 +275,7 @@ client.on('message', (message) => {
       .addField('후이야 빡대갈이야?', '후이봇과 후이봇 관리자를 더 기분나쁘게 한다.', true)
       .addField('후이야 하트', '우웩.', true)
       .addField('후이야 코로나', '이시국에?', true)
+      .addField('후이야 자폭해', '[폭발음]', true)
       .addField('후이야 치킨 시켜줘', '오늘 저녁은 치킨이닭?', true)
       .addField('후이야 크시는 어때?', '우웨웩.', true)
       .addField('후이야 넌', '넌 나에게 모욕감을 줬어.', true)
