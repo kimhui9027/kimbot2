@@ -109,6 +109,10 @@ client.on('message', (message) => {
     message.channel.send('우웨웩...');
   }
 
+  if(message.content === '후이야 하트') {
+    message.channel.send('우웨웩...');
+  }
+
   if(message.content === '후이야 안경빨') {
     message.channel.send('뽀로로');
   }
@@ -121,8 +125,8 @@ client.on('message', (message) => {
     message.channel.send('뭐이새꺄?');
   }
 
-  if(message.content === '후이 바보') {
-    message.channel.send('뭐이새꺄?');
+  if(message.content === '후이야 자폭해') {
+    message.channel.send(':exploding');
   }
 
   if(message.content === '후이야 바보') {
