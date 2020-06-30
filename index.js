@@ -40,6 +40,14 @@ client.on('message', (message) => {
     message.reply('부르셨어요?');
   }
 
+  if(message.content === '후이야 시끄러워') {
+    message.reply('닥쳐.');
+  }
+
+  if(message.content === '후이야 화려한조명이') {
+    message.reply('노래 못한다니깐');
+  }
+
   if(message.content === '후이야 無') {
     message.channel.send('의사양반 : 어.. 그러니까... 없어요');
   }
@@ -223,6 +231,7 @@ client.on('message', (message) => {
       .addField('후이야 크시는 어때?', '우웨웩.', true)
       .addField('후이야 넌', '넌 나에게 모욕감을 줬어.', true)
       .addField('후이야 앗!', '야생의 일반유저가 나왔다!', true)
+      .addField('후이야 화려한조명이', '나를 감싸네.', true)
       .addField('후이야 노래해줘, 후이야 강화해줘,후이야 배워', '후이봇이 못 하는것.', true)
       .addField('후이야 빡대갈이야?', '후이봇과 후이봇 관리자를 더 기분나쁘게 한다.', true)
       .addBlankField()
@@ -280,6 +289,7 @@ client.on('message', (message) => {
       .addField('후이야 크시는 어때?', '우웨웩.', true)
       .addField('후이야 넌', '넌 나에게 모욕감을 줬어.', true)
       .addField('후이야 앗!', '야생의 일반유저가 나왔다!', true)
+      .addField('후이야 화려한조명이', '나를 감싸네.', true)
       .addField('후이야 노래해줘, 후이야 강화해줘,후이야 배워', '후이봇이 못 하는것.', true)
       .addField('후이야 빡대갈이야?', '후이봇과 후이봇 관리자를 더 기분나쁘게 한다.', true)
       .addBlankField()
