@@ -170,7 +170,7 @@ client.on('message', (message) => {
   }
 
   if(message.content === '후이야 버전') {
-    message.channel.send('버전은 ver.1.7.2 입니다.');
+    message.channel.send('버전은 ver.1.7.3 입니다.');
   }
 
   if(message.content === '후이야 kimhui9027') {
@@ -192,6 +192,7 @@ client.on('message', (message) => {
       .addField('후이야 도움말 후이봇과 놀기, 후이야 도움말2', '후이봇과 노는 법을 알여줌')
       .addField('후이야 도움말 공지, 후이야 도움말3', '후이봇이 전해주는 공지의 사용법을 알려줌', true)
       .addField('후이야 버전', '후이봇의 버전을 알 수 있음', true)
+      .addField('후이야 업데이트 내역', '후이봇의 업데이트 내역을 볼 수 있음', true)
       .addBlankField()
       .setTimestamp()
       .setFooter('', img)
@@ -427,8 +428,8 @@ client.on('message', (message) => {
       .setAuthor('', img, '')
       .setThumbnail(img)
       .addBlankField()
-      .addField('2020.07.01', '업데이트 내역 추가')
-      .addField('버전', 'ver.1.7.2', true)
+      .addField('2020.07.01', '업데이트 내역 추가, 도움말에 업데이트 내역 사용법 추가')
+      .addField('버전', 'ver.1.7.3', true)
       .addBlankField()
       .setTimestamp()
       .setFooter('', img)
