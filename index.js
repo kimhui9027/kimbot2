@@ -170,7 +170,7 @@ client.on('message', (message) => {
   }
 
   if(message.content === '후이야 버전') {
-    message.channel.send('버전은 ver.1.7.0 입니다.');
+    message.channel.send('버전은 ver.1.7.1 입니다.');
   }
 
   if(message.content === '후이야 kimhui9027') {
@@ -231,18 +231,21 @@ client.on('message', (message) => {
       .addBlankField()
       .addField('후이야', '후이봇을 부른다.', true)
       .addField('후이야?', '후이봇을 또 부른다.', true)
+      .addField('후이야 후이야', '후이봇을 두번 더 부른다.', true)
       .addField('후이야 안녕', '후이봇과 인사를 할 수 있음.', true)
       .addField('후이바보, 후이 바보, 후이야 바보', '후이봇과 후이봇관리자를 기분나쁘게 한다.', true)
       .addField('후이야 너 못생겼어', '같이 기분나쁘게 하는거지만 맞는 말이다.', true)
       .addField('후이야 흠', '흠.', true)
       .addField('후이야 후라이', '깡!', true)
       .addField('후이야 無', '이보시오.. 이보시오... 의사양반!', true)
+      .addField('후이야 배고파, 후이야 밥줘', '후이봇한테 밥을 얻어먹을 수 있다.(없다)', true)
       .addField('후이야 시끄러워', '흐으음...', true)
       .addField('후이야 안녕, 하이', '후이봇에게 인사를 한다.', true)
       .addField('후이야 빡대갈이야?', '후이봇과 후이봇 관리자를 더 기분나쁘게 한다.', true)
       .addField('후이야 하트', '우웩.', true)
       .addField('후이야 코로나', '이시국에?', true)
       .addField('후이야 자폭해', '[폭발음]', true)
+      .addField('후이야 치킨좀', '(닭이 증발해버렸다.)', true)
       .addField('후이야 치킨 시켜줘', '오늘 저녁은 치킨이닭?', true)
       .addField('후이야 크시는 어때?', '우웨웩.', true)
       .addField('후이야 넌', '넌 나에게 모욕감을 줬어.', true)
@@ -289,18 +292,21 @@ client.on('message', (message) => {
       .addBlankField()
       .addField('후이야', '후이봇을 부른다.', true)
       .addField('후이야?', '후이봇을 또 부른다.', true)
+      .addField('후이야 후이야', '후이봇을 두번 더 부른다.', true)
       .addField('후이야 안녕', '후이봇과 인사를 할 수 있음.', true)
       .addField('후이바보, 후이 바보, 후이야 바보', '후이봇과 후이봇관리자를 기분나쁘게 한다.', true)
       .addField('후이야 너 못생겼어', '같이 기분나쁘게 하는거지만 맞는 말이다.', true)
       .addField('후이야 흠', '흠.', true)
       .addField('후이야 후라이', '깡!', true)
       .addField('후이야 無', '이보시오.. 이보시오... 의사양반!', true)
+      .addField('후이야 배고파, 후이야 밥줘', '후이봇한테 밥을 얻어먹을 수 있다.(없다)', true)
       .addField('후이야 시끄러워', '흐으음...', true)
       .addField('후이야 안녕, 하이', '후이봇에게 인사를 한다.', true)
       .addField('후이야 빡대갈이야?', '후이봇과 후이봇 관리자를 더 기분나쁘게 한다.', true)
       .addField('후이야 하트', '우웩.', true)
       .addField('후이야 코로나', '이시국에?', true)
       .addField('후이야 자폭해', '[폭발음]', true)
+      .addField('후이야 치킨좀', '(닭이 증발해버렸다.)', true)
       .addField('후이야 치킨 시켜줘', '오늘 저녁은 치킨이닭?', true)
       .addField('후이야 크시는 어때?', '우웨웩.', true)
       .addField('후이야 넌', '넌 나에게 모욕감을 줬어.', true)
