@@ -222,6 +222,11 @@ client.on('message', (message) => {
     message.channel.send(embed)
   }
 
+    embed.addField('Commands: ', commandStr);
+
+    message.channel.send(embed)
+  }
+
   if(message.content == '후이야 도움말 후이봇과 놀기') {
     let img = '';
     let embed = new Discord.RichEmbed()
@@ -277,6 +282,11 @@ client.on('message', (message) => {
     commandList.forEach(x => {
       commandStr += `• \`\`${changeCommandStringLength(`${x.name}`)}\`\` : **${x.desc}**\n`;
     });
+
+    embed.addField('Commands: ', commandStr);
+
+    message.channel.send(embed)
+  }
 
     embed.addField('Commands: ', commandStr);
 
