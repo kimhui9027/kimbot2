@@ -170,7 +170,7 @@ client.on('message', (message) => {
   }
 
   if(message.content === '후이야 버전') {
-    message.channel.send('버전은 ver.1.7.4 입니다.');
+    message.channel.send('버전은 ver.1.7.5 입니다.');
   }
 
   if(message.content === '후이야 kimhui9027') {
@@ -430,7 +430,7 @@ client.on('message', (message) => {
       .addBlankField()
       .addField('2020.07.01', '업데이트 내역 추가, 도움말에 업데이트 내역 사용법 추가')
       .addField('2020.07.01', '업데이트 내역 수정')
-      .addField('버전', 'ver.1.7.4', true)
+      .addField('버전', 'ver.1.7.5', true)
       .addBlankField()
       .setTimestamp()
       .setFooter('', img)
