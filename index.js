@@ -3,8 +3,6 @@ const client = new Discord.Client();
 const token = process.env.token;
 const welcomeChannelName = "입장-퇴장";
 const byeChannelName = "입장-퇴장";
-const welcomeChannelName = "환영";
-const byeChannelName = "jfsdljsldfjlkjsdljk";
 const welcomeChannelComment = "님! Team.kimhui9027에 오신 것을 환영합니다!";
 const byeChannelComment = "님이 Team.kimhui9027에서 나가신다니 아쉽네요,";
 
@@ -99,6 +97,10 @@ client.on('message', (message) => {
     message.channel.send('시러.');
   }
 
+  if(message.content === '후이야 치킨좀') {
+    message.channel.send('시러! 안된다고!');
+  }
+
   if(message.content === '후이야 넌') {
     message.reply('넌 나에게 모욕감을 줬어.');
   }
@@ -155,8 +157,20 @@ client.on('message', (message) => {
     message.channel.send('메이터');
   }
 
+  if(message.content === '후이야 후이야') {
+    message.channel.send('왜 두번 부르시나요?');
+  }
+
+  if(message.content === '후이야 배고파') {
+    message.channel.send('내가 니엄마냐 알아서 처먹어');
+  }
+
+  if(message.content === '후이야 밥줘') {
+    message.channel.send('난 봇일 뿐이란다. 밥은 니 엄마한테 해달라고 해.');
+  }
+
   if(message.content === '후이야 버전') {
-    message.channel.send('버전은 ver.1.6.8 입니다.');
+    message.channel.send('버전은 ver.1.7.0 입니다.');
   }
 
   if(message.content === '후이야 kimhui9027') {
