@@ -3,6 +3,8 @@ const client = new Discord.Client();
 const token = process.env.token;
 const welcomeChannelName = "입장-퇴장";
 const byeChannelName = "입장-퇴장";
+const welcomeChannelName = "환영";
+const byeChannelName = "jfsdljsldfjlkjsdljk";
 const welcomeChannelComment = "님! Team.kimhui9027에 오신 것을 환영합니다!";
 const byeChannelComment = "님이 Team.kimhui9027에서 나가신다니 아쉽네요,";
 
