@@ -255,7 +255,7 @@ client.on('message', (message) => {
       .addField('후이야 빡대갈이야?', '후이봇과 후이봇 관리자를 더 기분나쁘게 한다.', true)
       .addBlankField()
       .setTimestamp()
-      .setFooter('그 외는 관리자에게 물어보시오.', img)
+      .setFooter('그 외는 관리자에게 물어보시오.')
 
     message.channel.send(embed)
   } else if(message.content == 'embed2') {
