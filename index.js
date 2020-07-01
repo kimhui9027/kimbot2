@@ -246,6 +246,7 @@ client.on('message', (message) => {
       .addField('후이야 하트', '우웩.', true)
       .addField('후이야 코로나', '이시국에?', true)
       .addField('후이야 자폭해', '[폭발음]', true)
+      .addField('후이야 치킨좀', '닭이 모두 증발해버렸다.', true)
       .addField('후이야 치킨 시켜줘', '오늘 저녁은 치킨이닭?', true)
       .addField('후이야 크시는 어때?', '우웨웩.', true)
       .addField('후이야 넌', '넌 나에게 모욕감을 줬어.', true)
