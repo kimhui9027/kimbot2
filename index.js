@@ -170,7 +170,7 @@ client.on('message', (message) => {
   }
 
   if(message.content === '후이야 버전') {
-    message.channel.send('버전은 ver.1.7.3 입니다.');
+    message.channel.send('버전은 ver.1.7.4 입니다.');
   }
 
   if(message.content === '후이야 kimhui9027') {
@@ -423,13 +423,14 @@ client.on('message', (message) => {
   if(message.content == '후이야 업데이트 내역') {
     let img = '';
     let embed = new Discord.RichEmbed()
-      .setTitle('후이봇의 도움말')
+      .setTitle('업데이트 내역')
       .setURL('')
       .setAuthor('', img, '')
       .setThumbnail(img)
       .addBlankField()
       .addField('2020.07.01', '업데이트 내역 추가, 도움말에 업데이트 내역 사용법 추가')
-      .addField('버전', 'ver.1.7.3', true)
+      .addField('2020.07.01', '업데이트 내역 수정')
+      .addField('버전', 'ver.1.7.4', true)
       .addBlankField()
       .setTimestamp()
       .setFooter('', img)
