@@ -430,11 +430,10 @@ client.on('message', (message) => {
       .setAuthor('', img, '')
       .setThumbnail(img)
       .addBlankField()
-      .addField('2020-07-05', '마인리니지의 업데이트 내역 추가')
+      .addField('2020-07-05', '1.TAB키를 눌렀을때 자신의 닉네임앞에 칭호를 넣을수있게했지렁\n2.전광판에 레벨,길드명,등급을 표시하는것이 생겼다궁\n3./등급 목록 을 치면 등급들이 나온다굿!!!')
       .addBlankField()
       .setTimestamp()
       .setFooter('By kimhui9027, Update info', img)
-
     message.channel.send(embed)
   }
 
