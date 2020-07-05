@@ -100,6 +100,10 @@ client.on('message', (message) => {
   if(message.content === '후이야 치킨좀') {
     message.channel.send('시러! 안된다고!');
   }
+  
+  if(message.content === '후이야 울어') {
+    message.channel.send(':cry:');
+  }
 
   if(message.content === '후이야 넌') {
     message.reply('넌 나에게 모욕감을 줬어.');
