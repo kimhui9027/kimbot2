@@ -422,6 +422,22 @@ client.on('message', (message) => {
     message.channel.send(embed)
   }
 
+  if(message.content == '..업데이트 내역') {
+    let img = '';
+    let embed = new Discord.RichEmbed()
+      .setTitle('마인리니지 서버 업데이트 내역')
+      .setURL('')
+      .setAuthor('', img, '')
+      .setThumbnail(img)
+      .addBlankField()
+      .addField('2020-07-05', '마인리니지의 업데이트 내역 추가')
+      .addBlankField()
+      .setTimestamp()
+      .setFooter('By kimhui9027, Update info', img)
+
+    message.channel.send(embed)
+  }
+
   if(message.content == '후이야 업데이트 내역') {
     let img = '';
     let embed = new Discord.RichEmbed()
