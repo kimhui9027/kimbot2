@@ -462,20 +462,57 @@ client.on('message', (message) => {
     message.channel.send(embed)
   }
 
-  if(message.content == '.업데이트내역') {
+  if(message.content == '후이야 정보 아랍전자') {
     let img = '';
     let embed = new Discord.RichEmbed()
-      .setTitle('마인리니지 서버의 업데이트 내역')
+      .setTitle('아랍전자')
       .setURL('')
       .setAuthor('', img, '')
       .setThumbnail(img)
       .addBlankField()
-      .addField('2020.07.05', '2020-07-05', '1.TAB키를 눌렀을때 자신의 닉네임앞에 칭호를 넣을수있게했지렁')
-      .addField(' ', '2.전광판에 레벨,길드명,등급을 표시하는것이 생겼다궁')
-      .addField(' ', '3./등급 목록 을 치면 등급들이 나온다굿!!!')
+      .addField('GYCG Entertainments 디스코드를 만든 분.', ' ')
       .addBlankField()
       .setTimestamp()
-      .setFooter('By. kimhui9027', img)
+      .setFooter('', img)
+
+    message.channel.send(embed)
+  } else if(message.content == 'embed2') {
+    let helpImg = 'https://images-ext-1.discordapp.net/external/RyofVqSAVAi0H9-1yK6M8NGy2grU5TWZkLadG-rwqk0/https/i.imgur.com/EZRAPxR.png';
+    let commandList = [
+      {name: 'ping', desc: '현재 핑 상태'},
+      {name: 'embed', desc: 'embed 예제1'},
+      {name: 'embed2', desc: 'embed 예제2 (help)'},
+      {name: '!전체공지', desc: 'dm으로 전체 공지 보내기'},
+    ];
+    let commandStr = '';
+    let embed = new Discord.RichEmbed()
+      .setAuthor('Help of 콜라곰 BOT', helpImg)
+      .setColor('#186de6')
+      .setFooter(`콜라곰 BOT ❤️`)
+      .setTimestamp()
+    
+    commandList.forEach(x => {
+      commandStr += `• \`\`${changeCommandStringLength(`${x.name}`)}\`\` : **${x.desc}**\n`;
+    });
+
+    embed.addField('Commands: ', commandStr);
+
+    message.channel.send(embed)
+  }
+
+  if(message.content == '후이야 정보 흠메이터') {
+    let img = '';
+    let embed = new Discord.RichEmbed()
+      .setTitle('흠메이터')
+      .setURL('')
+      .setAuthor('', img, '')
+      .setThumbnail(img)
+      .addBlankField()
+      .addField('kimhui9027과 많이 싸우지만 여기에 추가한걸 보면 마음에 들어하는 거 같다.', ' ')
+      .addField('2020.07.01', '업데이트 내역 수정, commands fixed.')
+      .addBlankField()
+      .setTimestamp()
+      .setFooter('', img)
 
     message.channel.send(embed)
   } else if(message.content == 'embed2') {
