@@ -621,13 +621,13 @@ client.on('message', (message) => {
   if(message.content == '후이야 정보 H.SHRIMP') {
     let img = '';
     let embed = new Discord.RichEmbed()
-      .setTitle('김샌드')
+      .setTitle('H.SHRIMP')
       .setURL('')
       .setAuthor('', img, '')
       .setThumbnail(img)
       .addBlankField()
       .setColor('#0f0ff0')
-      .addField('아 쓸게 없네.', '맞아 쓸게 없어.')
+      .addField('아 쓸게 없네.', '쓸게 없었음 .')
       .addBlankField()
       .setTimestamp()
       .setFooter('', img)
