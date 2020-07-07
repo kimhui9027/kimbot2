@@ -421,6 +421,46 @@ client.on('message', (message) => {
 
     message.channel.send(embed)
   }
+  
+  if(message.content == '후이야 도움말 정보') {
+    let img = '';
+    let embed = new Discord.RichEmbed()
+      .setTitle('후이봇이 생각하는 분들')
+      .setURL('')
+      .setAuthor('', img, '')
+      .setThumbnail(img)
+      .addBlankField()
+      .addField('후이야 정보 아랍전자', '아랍전자님의 정보를 볼 수 있습니다.(kimhui9027이 생각하는 정보입니다.)', true)
+      .addField('후이야 정보 흠메이터', '흠메이터의 정보를 볼 수 있습니다.(kimhui9027이 생각하는 정보입니다.)')
+      .addField('후이야 정보 kimhui9027', '제가 그냥 만들어본겁니다.')
+      .addBlankField()
+      .setTimestamp()
+      .setFooter('kimhui9027에게 문의하면 추가해 드립니다.', img)
+
+    message.channel.send(embed)
+  } else if(message.content == 'embed2') {
+    let helpImg = 'https://images-ext-1.discordapp.net/external/RyofVqSAVAi0H9-1yK6M8NGy2grU5TWZkLadG-rwqk0/https/i.imgur.com/EZRAPxR.png';
+    let commandList = [
+      {name: 'ping', desc: '현재 핑 상태'},
+      {name: 'embed', desc: 'embed 예제1'},
+      {name: 'embed2', desc: 'embed 예제2 (help)'},
+      {name: '!전체공지', desc: 'dm으로 전체 공지 보내기'},
+    ];
+    let commandStr = '';
+    let embed = new Discord.RichEmbed()
+      .setAuthor('Help of 콜라곰 BOT', helpImg)
+      .setColor('#186de6')
+      .setFooter(`콜라곰 BOT ❤️`)
+      .setTimestamp()
+    
+    commandList.forEach(x => {
+      commandStr += `• \`\`${changeCommandStringLength(`${x.name}`)}\`\` : **${x.desc}**\n`;
+    });
+
+    embed.addField('Commands: ', commandStr);
+
+    message.channel.send(embed)
+  }
 
   if(message.content == '후이야 업데이트 내역') {
     let img = '';
@@ -432,7 +472,8 @@ client.on('message', (message) => {
       .addBlankField()
       .addField('2020.07.01', '업데이트 내역 추가, 도움말에 업데이트 내역 사용법 추가')
       .addField('2020.07.01', '업데이트 내역 수정, commands fixed.')
-      .addField('버전', 'ver.1.7.9', true)
+      .addField('2020.07.07', '후이야 정보, 후이야 도움말 정보, 후이야 도움말4 추가 완료.')
+      .addField('버전', 'ver.1.8.1', true)
       .addBlankField()
       .setTimestamp()
       .setFooter('', img)
@@ -471,10 +512,10 @@ client.on('message', (message) => {
       .setThumbnail(img)
       .addBlankField()
       .setColor('#00ff00')
-      .addField('GYCG Entertainments 디스코드를 만든 분.', '대다나다')
+      .addField('GYCG Entertainments 디스코드를 만든 분.', '대단하다.')
       .addBlankField()
       .setTimestamp()
-      .setFooter('', img)
+      .setFooter('아랍전자님의 유튜브 링크 : https://www.youtube.com/channel/UCoHPNRunRSlDtdMvqnsFTrA', img)
 
     message.channel.send(embed)
   } else if(message.content == 'embed2') {
@@ -513,7 +554,7 @@ client.on('message', (message) => {
       .addField('kimhui9027과 많이 싸우지만 여기 있는걸 보니 마음에 들어하는거 같기도.', '이거 만든 날에도 싸움')
       .addBlankField()
       .setTimestamp()
-      .setFooter('', img)
+      .setFooter('이 자식의 유튜브 링크 : https://www.youtube.com/channel/UCekWUxzMP9cYNsZBbiNoAig', img)
 
     message.channel.send(embed)
   } else if(message.content == 'embed2') {
@@ -552,7 +593,7 @@ client.on('message', (message) => {
       .addField('나의 제작자.', '솔직히 이거 쓰기 귀찮았음')
       .addBlankField()
       .setTimestamp()
-      .setFooter('', img)
+      .setFooter('내 제작자의 유튜브 링크 : https://www.youtube.com/channel/UC5DKCdBWdo7ECfu5Edir6eA?view_as=subscriber', img)
 
     message.channel.send(embed)
   } else if(message.content == 'embed2') {
@@ -591,7 +632,7 @@ client.on('message', (message) => {
       .addField('GYCG에서 초창기멤버 이다. 메니저였다가 후이에게 물려주고 나갔다가 몇번 왔다갔다 하지만 지금은 C등급으로 활동중이다.', '와!')
       .addBlankField()
       .setTimestamp()
-      .setFooter('', img)
+      .setFooter('김샌드님의 유튜브 채널 링크 : https://www.youtube.com/channel/UCy5UjqKAvI6qXTdnhHxh1WA', img)
 
     message.channel.send(embed)
   } else if(message.content == 'embed2') {
@@ -630,7 +671,7 @@ client.on('message', (message) => {
       .addField('아 쓸게 없네.', '쓸게 없었음 .')
       .addBlankField()
       .setTimestamp()
-      .setFooter('', img)
+      .setFooter('그냥 추가하고 싶지 않음(어차피 모름)', img)
 
     message.channel.send(embed)
   } else if(message.content == 'embed2') {
