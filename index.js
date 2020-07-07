@@ -588,7 +588,7 @@ client.on('message', (message) => {
       .setThumbnail(img)
       .addBlankField()
       .setColor('#f0f0f0')
-      .addField('GYCG에서 추방당했다 처벌을 받고 다시 돌아옴.', '와!')
+      .addField('GYCG에서 초창기멤버 이다. 메니저였다가 후이에게 물려주고 나갔다가 몇번 왔다갔다 하지만 지금은 C등급으로 활동중이다.', '와!')
       .addBlankField()
       .setTimestamp()
       .setFooter('', img)
