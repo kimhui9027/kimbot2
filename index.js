@@ -197,6 +197,7 @@ client.on('message', (message) => {
       .addField('후이야 도움말 공지, 후이야 도움말3', '후이봇이 전해주는 공지의 사용법을 알려줌', true)
       .addField('후이야 버전', '후이봇의 버전을 알 수 있음', true)
       .addField('후이야 업데이트 내역', '후이봇의 업데이트 내역을 볼 수 있음', true)
+      .addField('.투표 투표제목.투표1.투표2.~', '후이봇으로 투표흫 할 수 있음', true)
       .addBlankField()
       .setTimestamp()
       .setFooter('', img)
