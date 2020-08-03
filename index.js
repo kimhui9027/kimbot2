@@ -174,7 +174,7 @@ client.on('message', (message) => {
   }
 
   if(message.content === '후이야 버전') {
-    message.channel.send('버전은 ver.1.7.9 입니다.');
+    message.channel.send('버전은 ver.1.8.1 입니다.');
   }
 
   if(message.content === '후이야 kimhui9027') {
@@ -474,6 +474,7 @@ client.on('message', (message) => {
       .addField('2020.07.01', '업데이트 내역 추가, 도움말에 업데이트 내역 사용법 추가')
       .addField('2020.07.01', '업데이트 내역 수정, commands fixed.')
       .addField('2020.07.07', '후이야 정보, 후이야 도움말 정보, 후이야 도움말4 추가 완료.')
+      .addField('2020.08.03', '투표봇과 통합 완료. (후이야 도움말에 있습니다.)')
       .addField('버전', 'ver.1.8.1', true)
       .addBlankField()
       .setTimestamp()
