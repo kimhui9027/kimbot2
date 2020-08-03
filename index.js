@@ -174,7 +174,7 @@ client.on('message', (message) => {
   }
 
   if(message.content === '후이야 버전') {
-    message.channel.send('버전은 ver.1.8.1 입니다.');
+    message.channel.send('버전은 ver.1.8.2 입니다.');
   }
 
   if(message.content === '후이야 kimhui9027') {
@@ -197,7 +197,7 @@ client.on('message', (message) => {
       .addField('후이야 도움말 공지, 후이야 도움말3', '후이봇이 전해주는 공지의 사용법을 알려줌', true)
       .addField('후이야 버전', '후이봇의 버전을 알 수 있음', true)
       .addField('후이야 업데이트 내역', '후이봇의 업데이트 내역을 볼 수 있음', true)
-      .addField('.투표 투표제목.투표1.투표2.~', '후이봇으로 투표흫 할 수 있음', true)
+      .addField('.투표 투표제목.투표1.투표2.~', '후이봇으로 투표를 할 수 있음', true)
       .addBlankField()
       .setTimestamp()
       .setFooter('', img)
@@ -474,8 +474,8 @@ client.on('message', (message) => {
       .addField('2020.07.01', '업데이트 내역 추가, 도움말에 업데이트 내역 사용법 추가')
       .addField('2020.07.01', '업데이트 내역 수정, commands fixed.')
       .addField('2020.07.07', '후이야 정보, 후이야 도움말 정보, 후이야 도움말4 추가 완료.')
-      .addField('2020.08.03', '투표봇과 통합 완료. (후이야 도움말에 있습니다.)')
-      .addField('버전', 'ver.1.8.1', true)
+      .addField('2020.08.03', '투표봇과 통합 완료. (후이야 도움말에 있습니다.), 오타 ')
+      .addField('버전', 'ver.1.8.2', true)
       .addBlankField()
       .setTimestamp()
       .setFooter('', img)
