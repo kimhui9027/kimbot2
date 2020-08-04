@@ -174,7 +174,7 @@ client.on('message', (message) => {
   }
 
   if(message.content === '후이야 버전') {
-    message.channel.send('버전은 ver.1.8.2 입니다.');
+    message.channel.send('버전은 ver.1.8.3 입니다.');
   }
 
   if(message.content === '후이야 kimhui9027') {
@@ -476,7 +476,8 @@ client.on('message', (message) => {
       .addField('2020.07.01', '업데이트 내역 수정, commands fixed.')
       .addField('2020.07.07', '후이야 정보, 후이야 도움말 정보, 후이야 도움말4 추가 완료.')
       .addField('2020.08.03', '투표봇과 통합 완료. (후이야 도움말에 있습니다.), 오타 수정')
-      .addField('버전', 'ver.1.8.2', true)
+      .addField('2020.08.04', '후이야 정보 수정.')
+      .addField('버전', 'ver.1.8.3', true)
       .addBlankField()
       .setTimestamp()
       .setFooter('', img)
@@ -633,7 +634,7 @@ client.on('message', (message) => {
       .addBlankField()
       .setColor('#f0f0f0')
       .addField('GYCG에서 초창기멤버 이다. 메니저였다가 후이에게 물려주고 나갔다가 몇번 왔다갔다 하지만 지금은 법인으로 활동중이다.', '와!')
-      .addField('김샌드 서버[킴]의 최초의 관리자이며 구독자 25명을 보유하고있다 트위치도 활동중인데 방송을 잘안한다.', ' ')
+      .addField('김샌드 서버[킴]의 최초의 관리자이며 김샌드 월드 마인크래프트 1.16.1 버전을 제작중이다. 구독자 25명을 보유중이고 트위치도 활동중이다 하지만 방송을 잘 않하는 편이다.', ' ')
       .addBlankField()
       .setTimestamp()
       .setFooter('김샌드님의 유튜브 채널 링크 : https://www.youtube.com/channel/UCy5UjqKAvI6qXTdnhHxh1WA', img)
