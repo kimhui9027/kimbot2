@@ -703,6 +703,45 @@ client.on('message', (message) => {
     message.channel.send(embed)
   }
 
+  if(message.content == '후이야 정보 치즈버거') {
+    let img = '';
+    let embed = new Discord.RichEmbed()
+      .setTitle('치즈버거(cheezebu12)')
+      .setURL('')
+      .setAuthor('', img, '')
+      .setThumbnail(img)
+      .addBlankField()
+      .setColor('#ff9900')
+      .addField('Team.kimhui9027의 부팀장이댬', '현재 치즈서버(개발중단),머인리니지서버를  개발중이고 마인리니지가 개발완료되면 인생서버를 만들 계획중이다.\n뭐 참고하자면 07년생 중딩이고 ㅈㄴ잘생겼다')
+      .addBlankField()
+      .setTimestamp()
+      .setFooter('치즈버거님의 유튜브 링크 : https://www.youtube.com/channel/UCy6dYt_2SJSPBfXyaxXrWyQ', img)
+
+    message.channel.send(embed)
+  } else if(message.content == 'embed2') {
+    let helpImg = 'https://images-ext-1.discordapp.net/external/RyofVqSAVAi0H9-1yK6M8NGy2grU5TWZkLadG-rwqk0/https/i.imgur.com/EZRAPxR.png';
+    let commandList = [
+      {name: 'ping', desc: '현재 핑 상태'},
+      {name: 'embed', desc: 'embed 예제1'},
+      {name: 'embed2', desc: 'embed 예제2 (help)'},
+      {name: '!전체공지', desc: 'dm으로 전체 공지 보내기'},
+    ];
+    let commandStr = '';
+    let embed = new Discord.RichEmbed()
+      .setAuthor('Help of 콜라곰 BOT', helpImg)
+      .setColor('#186de6')
+      .setFooter(`콜라곰 BOT ❤️`)
+      .setTimestamp()
+    
+    commandList.forEach(x => {
+      commandStr += `• \`\`${changeCommandStringLength(`${x.name}`)}\`\` : **${x.desc}**\n`;
+    });
+
+    embed.addField('Commands: ', commandStr);
+
+    message.channel.send(embed)
+  }
+
   if(message.content.startsWith('후이야 전체공지')) {
     if(checkPermission(message)) return
     if(message.member != null) { // 채널에서 공지 쓸 때
